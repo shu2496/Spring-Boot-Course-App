@@ -35,8 +35,4 @@ public class Course {
     public void setAuthor(String author) {
         this.author = author;
     }
-
-
-
-
 }

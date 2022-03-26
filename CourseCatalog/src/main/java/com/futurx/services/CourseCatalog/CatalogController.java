@@ -10,31 +10,31 @@ public class CatalogController {
     @RequestMapping("/")
     public String getCatalogHome() {
         String courseAppMesage = "";
-        String courseAppURL = "http://localhost:8080/";
+        String courseAppURL = "http://localhost:9001/";
         RestTemplate restTemplate = new RestTemplate();
         courseAppMesage = restTemplate.getForObject(courseAppURL,String.class);
 
-        return("Welcome to FutureX Course Catalog "+courseAppMesage);
+        return("Welcome to Catalog "+courseAppMesage);
     }
 
     @RequestMapping("/catalog")
     public String getCatalog() {
         String courses = "";
-        String courseAppURL = "http://localhost:8080/courses";
+        String courseAppURL = "http://localhost:9001/courses";
         RestTemplate restTemplate = new RestTemplate();
         courses = restTemplate.getForObject(courseAppURL,String.class);
 
-        return("Our courses are "+courses);
+        return("We offer the following courses \n "+courses);
     }
 
     @RequestMapping("/firstcourse")
     public String getSpecificCourse() {
         Course course = new Course();
-        String courseAppURL = "http://localhost:8080/1";
+        String courseAppURL = "http://localhost:9001/1";
         RestTemplate restTemplate = new RestTemplate();
         course = restTemplate.getForObject(courseAppURL,Course.class);
 
-        return("Our first course is "+course.getCoursename());
+        return("Our first course is: \n"+course.getCoursename());
     }
 
 }
