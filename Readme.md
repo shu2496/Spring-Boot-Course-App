@@ -1,5 +1,5 @@
 ## Spring Boot Course and Catalog App
-** Two Spring Boot application interecting with each other connecting with sqlite database**
+* Two Spring Boot application interecting with each other connecting with sqlite database. *
 
 ## Prerequisites
 * Java 11
@@ -12,7 +12,7 @@
 
 ## To check for the database
 1. Go to the directory folder and run this command sqlite3 futurexcourse.db
-2. 
+ 
 ### Database Schema
 ## for sqlite to create table
 1. CREATE TABLE
